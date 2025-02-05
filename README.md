@@ -1,7 +1,3 @@
-# Movie Ranker  
-
-A simple web app to rank movies by comparing them in pairs.
-
 # Movie Ranker
 
 An interactive web application for ranking movies through pairwise comparisons.
