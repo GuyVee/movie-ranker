@@ -1,0 +1,10 @@
+{
+  "name": "movie-ranker",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Movie ranking application",
+  "main": "test-sort.js",
+  "scripts": {
+    "test": "node test-sort.js"
+  }
+}
