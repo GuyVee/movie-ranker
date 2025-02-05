@@ -1,6 +1,8 @@
 # System files
 .DS_Store
 Thumbs.db
+api.txt
+api.txt.pub
 
 # Editor directories and files
 .idea/
