@@ -10,10 +10,9 @@ This app uses the [OMDb API](http://www.omdbapi.com/) to fetch movie data. To us
 
 1. Go to http://www.omdbapi.com/apikey.aspx
 2. Enter your email address and click "Subscribe"
-3. You'll receive an API key via email 
-4. Enter this API key in the input field on the app's homepage
-
-With a valid API key, the app will be able to fetch movie data like titles, posters, and more from the OMDb database.
+3. You'll receive an API key via email
+4. Make sure to click the activate api key link in the email
+5. Enter this API key in the input field on the app's homepage
 
 ### Using Python's Built-in Server (Recommended)
 
