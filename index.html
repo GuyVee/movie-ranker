@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ranker</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Movie Ranker</h1>
+            <div id="progress-indicator">
+                <span id="comparisons-count">0</span> comparisons made
+            </div>
+        </header>
+
+        <div id="movie-input-container" class="active">
+            <h2>Add Movies to Rank</h2>
+            <div class="input-tabs">
+                <button class="tab-button active" data-tab="single">Add Single Movie</button>
+                <button class="tab-button" data-tab="bulk">Bulk Upload</button>
+            </div>
+
+            <div id="single-input" class="tab-content active">
+                <form id="add-movie-form">
+                    <div class="form-group">
+                        <input type="text" id="movie-title" placeholder="Movie Title" required>
+                        <input type="url" id="movie-poster-url" placeholder="Movie Poster URL (optional)">
+                        <button type="submit" class="add-button">Add Movie</button>
+                    </div>
+                </form>
+            </div>
+
+            <div id="bulk-input" class="tab-content">
+                <form id="bulk-upload-form">
+                    <div class="form-group">
+                        <textarea id="movie-titles" 
+                            placeholder="Enter movie titles, one per line&#10;Example:&#10;The Godfather&#10;Pulp Fiction&#10;The Matrix" 
+                            rows="8" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="add-button">Add Movies</button>
+                        <div id="upload-progress" class="hidden">
+                            <span id="progress-text">Fetching movie data...</span>
+                            <div class="progress-bar">
+                                <div class="progress-fill"></div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="movie-list">
+                <h3>Movies to Rank:</h3>
+                <ul id="added-movies"></ul>
+            </div>
+            <button id="start-ranking" class="primary-button" disabled>Start Ranking</button>
+        </div>
+
+        <main>
+            <div id="comparison-container" class="hidden">
+                <div class="movie-cards">
+                    <div class="movie-card" id="movie-left">
+                        <div class="poster-container">
+                            <img src="" alt="Movie Poster 1" class="movie-poster">
+                            <h3 class="movie-title"></h3>
+                        </div>
+                        <button class="choose-button">Choose This Movie</button>
+                    </div>
+                    <div class="vs-indicator">VS</div>
+                    <div class="movie-card" id="movie-right">
+                        <div class="poster-container">
+                            <img src="" alt="Movie Poster 2" class="movie-poster">
+                            <h3 class="movie-title"></h3>
+                        </div>
+                        <button class="choose-button">Choose This Movie</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="results-container" class="hidden">
+                <h2>Your Movie Rankings</h2>
+                <ol id="rankings-list"></ol>
+                <button id="restart-button">Start New Ranking</button>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
